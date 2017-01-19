@@ -1,0 +1,44 @@
+<section class="contact page-section" id="Update">  
+		<div class="contact">    
+		<div class="heading">
+				
+				<h2>Create a cake</h2>
+				<h3>fill in your cake information</h3>
+		</div> 
+		</div>
+		<div class="container w960">
+      	<div class="row">
+
+      	<form id = "contactform" ng-controller="UploadCtrl">
+            <div class="left">
+                <div class="file-preview ">
+                    <div class=" file-drop-zone">
+                        <div class="button file-drop-zone-title" ngf-drop ngf-select ng-model="file" ngf-allow-dir="true" name="file" ngf-pattern="'image/*'"
+                             ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="200"
+                             ngf-resize="{width: 150, height: 150}" ng-multiple="false">Drag goods picture here</div>
+                        <div class="file-preview-thumbnails"><img ngf-src="file"/></div>
+                        <div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
+                        <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+                    </div>
+                </div>
+                <!--  <textarea cols="60" rows="10" name="msg" id="msg" class="text-input">Message *</textarea>-->
+                <br class="clear" />
+
+            </div>
+
+      			 <div class="right">
+                        <input ng-model="product_name" type="text" name="name" id="name" size="50" placeholder="good name *" value="" class="contact" required="" />
+                        <input ng-model="product_price" type="text" name="price" id="price" size="50" placeholder="good price *" value="" class="contact col-md-6" required="" />
+                        <textarea ng-model="product_detail" cols="60" rows="10" type="text" name="detail" id="detail" size="50" placeholder="good detail *" value="good detail *" class="contact col-md-6" required=""></textarea>
+                  </div>
+                       <!-- <span class="error" id="name_error">Please enter name !</span>
+                        <span class="error" id="email_error">Please enter price !</span>
+                        <span class="error" id="msg_error">Please enter message !</span> -->
+                        
+            <input ng-click="uploadProduct()" type="submit" id="submit" class="contact submit" value="Submit"/>
+        </form>
+        
+        </div>
+    </div>
+</section>
+  

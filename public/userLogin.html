@@ -1,0 +1,28 @@
+<section ng-app="eatApp" class="contact page-section" id="Login" ng-controller="userloginCtrl">
+	<div class="container">
+		<div class="heading">
+				
+				<h2>Login</h2>
+				<h3>Login to start a wonderful tour</h3>
+		</div>
+	</div>
+	 <div class="container w960">
+      <div class="row">
+      <div class="done">
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				Succeed to Login
+			</div>
+		</div>
+       <form ng-submit="login()" action="" id="contactform">
+       		<div class="col-md-12">
+       		<input ng-model="user.phonenum" name="phone" type="text" class="contact col-md-6" style="margin-left: 25%; margin-right: 25%"  placeholder="Phone Number *" required="">
+       		</div>
+       		<div class="col-md-12">
+          	<input ng-model="user.password" name="password" type="password" class="contact noMarr col-md-6" style="margin-left: 25%; margin-right: 25%" placeholder="Password *" required="">
+          	</div>
+         	<input type="submit" id="submit" class="contact submit" value="Login">
+        </form>
+      </div>
+    </div>
+	</section>

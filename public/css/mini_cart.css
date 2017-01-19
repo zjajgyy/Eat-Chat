@@ -1,0 +1,192 @@
+
+/* #Universal Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    background: #fff;
+    color: #272727;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+a,
+img {
+    border: none;
+    color: #c83b3b;
+    text-decoration: none;
+}
+a:hover {
+    color: #e9944f;
+}
+.ul-reset {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.container {
+    margin: auto;
+    width: 100%;
+}
+.left,
+.right {
+    float: left;
+    width: 50%;
+}
+.left {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    padding-top: 9px;
+}
+.top-bar {
+    background: #272727;
+    color: #fff;
+}
+/* #Cart Dropdown Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Dropdown Default Styles */
+
+.dropdowns {
+    position: relative;
+}
+.dropdowns:hover .minicart-content {
+    display: block;
+}
+.minicart-content {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-top-color: transparent;
+    color: #333;
+    display: none;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 2;
+}
+.minicart-content ul li {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+/* Button Styles */
+
+.cart-dropdown-btn a {
+    background: #F39C12;
+    color: #fff;
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 10px 14px;
+}
+.cart-dropdown-btn > a:before {
+    content: "\f07a";
+    font-family: FontAwesome;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.cart-dropdown-btn > a:after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-size: 10px;
+    padding-left: 10px;
+    position: relative;
+    top: -2px;
+}
+/* Cart Dropdown Image */
+
+.cart-image-wrapper {
+    display: table;
+    float: left;
+    margin-right: 20px;
+}
+.cart-image {
+    display: table-cell;
+    height: 50px;
+    width:50px;
+    vertical-align: middle;
+}
+/* Cart Dropdown Name and Price */
+
+.cart-details {
+    float: left;
+    margin-right: 10px;
+    width: 146px;
+}
+.cart-name {
+    margin-bottom: 10px;
+}
+.cart-price {
+    font-weight: 600;
+}
+/* Cart Dropdown Quantity */
+
+.cart-qty {
+    float: left;
+    text-align: center;
+    width: 30px;
+}
+.cart-qty-name {
+    font-size: 10px;
+}
+.cart-qty-value {
+    font-weight: 600;
+}
+/* Cart Checkout Buttons */
+
+.cart-btn {
+    display: block;
+    float: left;
+    font-weight: 600;
+    padding: 5px 0;
+    text-align: center;
+    transition: 0.3s;
+    width: 122px;
+}
+.view-cart {
+    border: 1px solid #bbb;
+    color: #444;
+    margin-right: 12px;
+}
+.view-cart:hover {
+    background: #ddd;
+    color: #444;
+}
+.checkout {
+    background: #c83b3b;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.checkout:hover {
+    background: #e9944f;
+    color: #fff;
+}
+/* #Browser Clearfix
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+
+    display: table;
+    /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/** For IE 6/7 only - Include this rule to trigger hasLayout and contain floats. **/
+
+.cf {
+    *zoom: 1;
+}

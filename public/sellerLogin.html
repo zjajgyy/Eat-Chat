@@ -1,0 +1,31 @@
+<section class="contact page-section" id="Login" ng-app="seller" ng-controller="loginCtrl">
+	<div class="container">
+		<div class="heading">
+				
+				<h2>Login</h2>
+				<h3>Login to start a wonderful tour</h3>
+		</div>
+	</div>
+	 <div class="container w960">
+      <div class="row">
+      <div class="done">
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				Succeed to Login
+			</div>
+		</div>
+       <form ng-submit="login()" action="" id="contactform">
+       		<div class="col-md-12">
+       		<input ng-model="seller.phonenum" name="phone" type="text" class="contact col-md-6" style="margin-right: 25%; margin-left: 25%"  placeholder="Phone Number *" required="">
+       		</div>
+       		<div class="col-md-12"> 
+          	<input ng-model="seller.password" name="password" type="password" class="contact noMarr col-md-6" style="margin-right: 25%; margin-left: 25%" placeholder="Password *" required="">
+          	</div>
+         	<input type="submit" id="submit" class="contact submit" value="Login">
+        </form>
+        <pre>
+            {{seller}}
+        </pre>
+      </div>
+    </div>
+	</section>

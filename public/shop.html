@@ -1,0 +1,37 @@
+<!--gallery-->
+<section class="gallery page-section" id="gallery" >
+    <div class="container">
+        <div class="heading">
+            <h2>shopName</h2>
+            <h3>shopAddress</h3>
+        </div>
+
+        <div id="grid-gallery" class="grid-gallery" ng-app="eatApp" ng-controller="GalleryCtrl">
+
+            <section class="grid-wrap">
+                <ul class="grid">
+                    <li class="grid-sizer"></li><!-- for Masonry column width -->
+                    <li ng-repeat="product in products">
+                        <figure>
+                            <img src="img/gallery/img1.jpg" alt=""/>
+                            <a href="#/detail/{{product.name}}" style="display: block; text-align: center;" >{{product.name}}</a>
+                            <figcaption>
+
+                                <h3>{{product.price}}</h3>
+                                <input type="button" class="shop-cartbutton" value="Add" ng-click="addToCart(product)">
+
+                            </figcaption>
+
+
+                        </figure>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- // end small images -->
+
+        </div><!-- // grid-gallery -->
+    </div>
+</section>
+

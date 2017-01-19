@@ -1,0 +1,38 @@
+<section ng-app="seller" class="contact page-section" id="Register" ng-controller="regCtrl">
+    <div class="container">
+        <div class="heading">
+            <h2>Register</h2>
+            <h3>Register to start a wonderful tour</h3>
+        </div>
+    </div>
+    <div class="container w960">
+        <div class="row">
+            <div class="done">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    Succeed to Register
+                </div>
+            </div>
+       <form name="regCtrl.form" ng-submit="register()" id="contactform">
+                <div class="col-md-12">
+          <input ng-model="th.seller.name" name="name" type="text" class="contact col-md-12" placeholder="Your Shop Name *" required="">
+                </div>
+                <div class="col-md-12">
+          <input ng-model="th.seller.phone" name="phone" type="text" class="contact col-md-6" placeholder="Phone number *" required="">
+          <input ng-model="th.seller.password" name="password" type="password" class="contact noMarr col-md-6" placeholder="Password *" required="">
+                </div>
+                <div class="col-md-12">
+          <input ng-model="th.seller.city" name="city" type="text" class="contact col-md-6" placeholder="City *" required="">
+          <input ng-model="th.seller.postcode" name="postcode" type="text" class="contact noMarr col-md-6" placeholder="Postcode *" required="">
+                </div>
+                <div class="col-md-12">
+          <input ng-model="th.seller.address" name="shippingAddress" type="text" class="contact col-md-12" placeholder="Shipping address *" required="">
+                </div>
+          <input type="submit" id="submit" class="contact submit" value="Finish">
+            </form>
+        <pre>
+          {{th.seller}}
+        </pre>
+        </div>
+    </div>
+</section>

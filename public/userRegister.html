@@ -1,0 +1,30 @@
+<section ng-app="eatApp" class="contact page-section" id="Register" ng-controller="userregCtrl">
+    <div class="container">
+        <div class="heading">
+            <h2>Register</h2>
+            <h3>Register to start a wonderful tour</h3>
+        </div>
+    </div>
+    <div class="container w960">
+        <div class="row">
+            <div class="done">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    Succeed to Register
+                </div>
+            </div>
+            <form ng-submit="register()" action="" id="contactform">
+                <div class="col-md-12">
+                    <input ng-model="user.phonenum" name="phone" type="text" class="contact col-md-6" style="margin-left: 25%; margin-right: 25%"  placeholder="Phone Number *" required="">
+                </div>
+                <div class="col-md-12">
+                    <input ng-model="user.password" name="password" type="password" class="contact noMarr col-md-6" style="margin-left: 25%; margin-right: 25%" placeholder="Password *" required="">
+                </div>
+                <div class="col-md-12">
+                    <input ng-model="user.confirmpassword" name="confirm-password" type="confirmpassword" class="contact noMarr col-md-6" style="margin-left: 25%; margin-right: 25%" placeholder="Confirm Password *" required="">
+                </div>
+                <input type="submit" id="submit" class="contact submit" value="Register">
+            </form>
+        </div>
+    </div>
+</section>

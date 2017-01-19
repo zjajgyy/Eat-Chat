@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en" ng-app="eatApp">
+<!--<![endif]-->
+<head>
+
+<meta charset="UTF-8"/>
+
+<title>Home</title>
+
+<meta name="description" content="Eat Cakes">
+
+<meta name="author" content="webthemez">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/mini_cart.css">
+<!--<link href='http://fonts.useso.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+
+<!-- load angular via CDN -->
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+  <!--  <script src="js/buyerRouter.js"></script>-->
+    <script src="js/buyerControllers/GalleryController.js"></script>
+    <script src="js/buyerControllers/DetailController.js"></script>
+    <script src="js/buyerControllers/CartController.js"></script>
+    <script src="js/buyerControllers/UserLoginController.js"></script>
+    <script src="js/buyerControllers/UserRegisterController.js"></script>
+</head>
+
+
+<body>
+<!--wrapper start-->
+<div class="wrapper">
+
+	<!--header-->
+	<header id="header">
+	<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <div class="slide-1"></div>
+            <div class="hero">
+                <hgroup>
+                <img src="img/logo.png" alt="logo"/>
+                <h1>We are creative</h1>        
+                <h3>Get start your next eating</h3>
+                </hgroup>
+                <a class="btn btn-hero btn-lg" href="#/cake_gallery">Eat & Chat</a>
+            </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-2"></div>
+          <div class="hero">        
+            <hgroup>
+               <img src="img/logo.png" alt="logo"/>
+                <h1>We are smart</h1>        
+                <h3>Get start your next eating</h3>
+            </hgroup>       
+            <a class="btn btn-hero btn-lg" href="#/cake_gallery">Eat & Chat</a>
+          </div>
+        </div>
+  </div> 
+
+
+	<div class="menu">
+		<nav class="navbar navbar-wrapper stuckMenu"> 
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div id="main-nav" class="collapse navbar-collapse">
+                     <ul class="nav navbar-nav">
+                      <li><a href="seller.html" class="scroll-link">Seller Login</a></li>
+                      <li><a href="#/userLogin" class="scroll-link">User Login</a></li>
+                         <li><a href="#/userRegister" class="scroll-link">User Register</a></li>
+                      <li><a href="#header" class="scroll-link">Home</a></li>
+                      <li><a href="#/cake_gallery" data-target="#cake_gallery" class="scroll-link">Gallery</a></li> 
+                      <li><a href="#/detail" class="scroll-link">Details</a></li>
+                      <li><a href="#/service" class="scroll-link">Best Sales</a></li>  
+                      <li><a href="#/contact" class="scroll-link">Contact</a></li>
+                    </ul>
+              </div>
+          </div>  
+		</nav>
+	</div>	
+    </div>
+
+	</header>
+	
+    
+    
+    <div ng-view></div>
+
+
+    <div class="container" >
+        <div class="left">
+        </div>
+        <!-- .left -->
+
+        <div class="right">
+            <div class="cart dropdowns">
+                <div class="cart-dropdown-btn">
+                    <a>
+                        <span>购物车</span>
+                    </a>
+                </div>
+                <!-- .cart-button -->
+
+                <div class="minicart-content"  ng-controller="CartCtrl">
+                    <ul class="ul-reset">
+                        <li ng-repeat="product in productList">
+                            <div class="cart-prod-wrapper cf">
+                                <div class="cart-image-wrapper">
+                                    <div class="cart-image">
+                                        <a href="#"><img src="img/gallery/{{product.saveUrl}}" alt="Product One">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="cart-details">
+                                    <div class="cart-name">
+                                        {{product.name}}
+                                    </div>
+                                    <div class="cart-price">{{product.price}}</div>
+                                </div>
+
+                                <div class="cart-qty">
+                                    <div class="cart-qty-name">数量:</div>
+                                    <div class="cart-qty-value">{{product.quantity}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="cart-btns-wrapper">
+                        <a style="visibility: hidden" class="cart-btn view-cart" >View Cart</a>
+                        <a class="cart-btn checkout" ng-click="checkout()">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+	<!--footer-->
+	<footer class="footer" id="footer">
+	<p class="text-center">
+		<a href="#header" class="gototop"><i class="fa fa-angle-double-up fa-2x"></i></a>
+	</p>
+	<div class="container">
+		
+	</div>
+	</footer>
+	
+</div><!--wrapper end-->
+
+<!--Javascripts-->
+<script src="js/buyerRouter.js"></script>
+<script src="js/style/jquery.js"></script>
+<script src="js/style/modernizr.js"></script>
+<script src="js/style/bootstrap.js"></script>
+<script src="js/style/jquery-scrolltofixed.js"></script>
+<script src="js/style/jquery.nav.js"></script>
+<script src="js/style/jquery.easing.1.3.js"></script>
+<script src="js/style/menustick.js"></script>
+<script src="js/style/easing.js"></script>
+<script src="js/style/wow.js"></script>
+<script src="js/style/smoothscroll.js"></script>
+<script src="js/style/masonry.js"></script>
+<script src="js/style/imgloaded.js"></script>
+<script src="js/style/classie.js"></script>
+<script src="js/style/colorfinder.js"></script>
+<script src="js/style/gridscroll.js"></script>
+<script src="js/style/contact.js"></script>
+<script src="js/style/custom.js"></script>
+
+<script type="text/javascript">
+jQuery(function($) {
+$(document).ready( function() {
+	$('.navbar-wrapper').stickUp();
+	});
+});
+</script>
+</body>
+</html>

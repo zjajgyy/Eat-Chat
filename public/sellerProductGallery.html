@@ -1,0 +1,36 @@
+<!--gallery-->
+<section class="gallery page-section" id="gallery" >
+    <div class="container">
+        <div class="heading">
+            <h2> Cakes Gallery</h2>
+            <h3> cakes are regularly updated.<br>
+                There are eight kinds of cakes available every day.</h3>
+        </div>
+
+        <div id="grid-gallery" class="grid-gallery" ng-app="seller" ng-controller="GalleryCtrl">
+
+            <section class="grid-wrap">
+                <ul class="grid">
+                    <li class="grid-sizer"></li><!-- for Masonry column width -->
+                    <li ng-repeat="product in products">
+                        <figure>
+                            <img src="img/gallery/{{product.saveUrl}}" alt=""/>
+                            <a href="#/sellerUpdate/{{product.name}}" style="display: block; text-align: center;" >{{product.name}}</a>
+                            <figcaption>
+                                <h3>{{product.price}}</h3>
+                                <input type="button" class="shop-cartbutton" value="Add" ng-click="addToCart(product)"  style="VISIBILITY: hidden">
+                            </figcaption>
+
+
+                        </figure>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- // end small images -->
+
+        </div><!-- // grid-gallery -->
+    </div>
+</section>
+
